@@ -5,9 +5,9 @@ import { HousingLocation } from './housing-location';
   providedIn: 'root'
 })
 export class HousingService {
-  protected housingLocationList : HousingLocation[]=[
+  protected housingLocationList : HousingLocation[]= [
     {
-      id : 0,
+    id : 0,
       name : "Citra Grand City",
       city : "Palembang",
       state : "indonesia",
@@ -26,15 +26,12 @@ export class HousingService {
       wifi : true,
       laundry : true,
     }
-  ];
-
-  ];
+  ]
   constructor() { }
-
   getAllHousingLocations() : HousingLocation[]{
     return this.housingLocationList;
   }
-}
-getHousingLocationById(id: Number) : HousingLocation | undefined{
-  return this.housingLocationList.find(housingLocation => housingLocation.id == id);
+  getHousingLocationById(id: Number) : HousingLocation |  undefined{
+    return this.housingLocationList.find(housingLocation => housingLocation.id == id);
+  }
 }
