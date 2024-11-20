@@ -118,6 +118,7 @@ export class HousingService {
       housingLocation.id == id);
   }
   submitAppLocation(firstName: String, lastName: String, email: String){
+    console.log(firstName, lastName, email);
 
   }
 }

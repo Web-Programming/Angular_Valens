@@ -59,10 +59,11 @@ export class DetailsComponent {
   }
 
   submitApplyForm(){
-    //alert("Hallo you submit a form");
-    //alert("Hallo : " + this.applyForm.value.firstName
-    //  + " " + this.applyForm.value.lastName)
-
     //panggil API simpan data registarsi via service
+    this.housingService.submitAppLocation(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? '',
+    )
   }
 }
